@@ -1,0 +1,22 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-springboot-app
+  annotations:
+    tektonci/build-namespace: my-springboot-app-dev
+    janus-idp.io/tekton: my-springboot-app
+    argocd/app-name: my-springboot-app-dev
+    backstage.io/kubernetes-id: my-springboot-app
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: redhat-na-ssa/my-springboot-app
+    quay.io/repository-slug: redhat_na_ssa/my-springboot-app
+  links:
+    - url: https://devspaces.apps.cluster-tdr4t.tdr4t.sandbox1239.opentlc.com/#https://github.com/redhat-na-ssa/my-springboot-app
+      title: OpenShift Dev Spaces (VS Code editor)
+      icon: web
+spec:
+  type: service
+  system: rhdh
+  lifecycle: production
+  owner: user:default/rafaeltuelho
